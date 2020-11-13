@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="99829fea-4061-4558-8b87-0cb6782c5392" name="Default Changelist" comment="init commit">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__diplomitdtu_matadorgui_3_1_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_7_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_7_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_7_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_7_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_7_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_7_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/33_del3.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dice/DiceCup.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/game/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/main/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/player/Account.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/player/Player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/test/AccountTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/test/DiceCupTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/test/GameTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/test/PlayerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/blackcave.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/colddesert.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/crater.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/face.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/goldmine.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/hutsinthemountain.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/images.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/monastery.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/palacegates.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/start.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/thepit.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/tower.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/walledcity.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/werewall.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/dice/DiceCup.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/game/Game.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/img/blackcave.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/img/colddesert.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/img/crater.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/img/face.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/img/goldmine.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/img/hutsinthemountain.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/img/images.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/img/monastery.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/img/palacegates.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/img/start.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/img/thepit.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/img/tower.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/img/walledcity.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/img/werewall.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/main/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/player/Account.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/player/Player.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/test/AccountTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/test/DiceCupTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/test/GameTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/test/PlayerTest.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.1\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1kEPUY6IlTdWYYi6Wwac2Ytahka" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.Main" />
+      <module name="33_del3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="99829fea-4061-4558-8b87-0cb6782c5392" name="Default Changelist" comment="" />
+      <created>1605262796072</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1605262796072</updated>
+      <workItem from="1605262797120" duration="1268000" />
+      <workItem from="1605265003334" duration="482000" />
+      <workItem from="1605265568670" duration="125000" />
+      <workItem from="1605265811840" duration="202000" />
+      <workItem from="1605266113750" duration="290000" />
+    </task>
+    <task id="LOCAL-00001" summary="init commit">
+      <created>1605265466312</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1605265466312</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="init commit" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="121" y="0" key="#Project_Structure" timestamp="1605262904536">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="121" y="0" key="#Project_Structure/0.0.1280.680@0.0.1280.680" timestamp="1605262904536" />
+    <state x="270" y="30" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1605262860751">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="270" y="30" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1280.680@0.0.1280.680" timestamp="1605262860751" />
+    <state width="1237" height="105" key="GridCell.Tab.0.bottom" timestamp="1605265489726">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="105" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1605265489726" />
+    <state width="1237" height="105" key="GridCell.Tab.0.center" timestamp="1605265489725">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="105" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1605265489725" />
+    <state width="1237" height="105" key="GridCell.Tab.0.left" timestamp="1605265489725">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="105" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1605265489725" />
+    <state width="1237" height="105" key="GridCell.Tab.0.right" timestamp="1605265489725">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="105" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1605265489725" />
+    <state x="233" y="61" key="Vcs.Push.Dialog.v2" timestamp="1605265484426">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="233" y="61" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1605265484426" />
+  </component>
+</project>
