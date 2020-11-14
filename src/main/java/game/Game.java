@@ -1,14 +1,12 @@
 package game;
 
 import dice.DiceCup;
-import gui_fields.GUI_Field;
-import gui_fields.GUI_Shipping;
+import gui_fields.*;
 import gui_main.GUI;
 import player.Player;
 
 import java.awt.*;
 import java.io.File;
-import java.util.Scanner;
 
 public class Game
 {
@@ -16,7 +14,6 @@ public class Game
     private final Player player1;
     private final Player player2;
     private final DiceCup dice;
-    private final Scanner input;
     private GUI gui;
     private GUI_Field[] fields;
     private Player currentPlayer;
@@ -24,19 +21,16 @@ public class Game
 
     public Game()
     {
-        input = new Scanner(System.in);
         dice = new DiceCup();
         GUI.setNull_fields_allowed(true);
 
-        fields = new GUI_Field[40];
+        fields = new GUI_Field[24];
         createField();
         gui = new GUI(fields, Color.WHITE);
 
         gameOver = false;
 
-        String welcome_msg = "Welcome to the game!\n"
-                + "You start with $1000 and gain or lose money depending on the fields you land on.\n"
-                + "First person to $3000 wins!\n";
+        String welcome_msg = "Welcome to the game!\n";
         gui.showMessage(welcome_msg);
 
         player1 = new Player(gui);
@@ -49,11 +43,10 @@ public class Game
 
     public Game(String playerName1, String playerName2)
     {
-        input = new Scanner(System.in);
         dice = new DiceCup();
         GUI.setNull_fields_allowed(true);
 
-        fields = new GUI_Field[40];
+        fields = new GUI_Field[24];
         createField();
         gui = new GUI(fields, Color.WHITE);
 
@@ -152,7 +145,7 @@ public class Game
         }
 
         fields[roll-1].setCar(player.getGuiPlayer(), true);
-        player.addPoints(Integer.parseInt(fields[roll-1].getSubText()));
+        //player.addPoints(Integer.parseInt(fields[roll-1].getSubText()));
         gui.showMessage(fields[roll-1].getDescription());
     }
 
@@ -161,18 +154,30 @@ public class Game
         // Get the absolut file path for images in a way that works cross platform
         String IMAGE_DIR_PATH = System.getProperty("user.dir") + File.separator + "src"  + File.separator + "main"  + File.separator + "resources"  + File.separator+ "img"  + File.separator;
         System.out.println(IMAGE_DIR_PATH);
-        fields[0] = new GUI_Shipping(IMAGE_DIR_PATH+"start.png","Start", "  ", "You stand at the start of your journey. Good Luck!", "rent", Color.CYAN , Color.BLACK);
-        fields[1] = new GUI_Shipping(IMAGE_DIR_PATH+"tower.png","Tower", "+250", "You found a gold stash in the nearby tower, You gain $250. Lucky you!", "+250", Color.GREEN , Color.BLACK);
-        fields[2] = new GUI_Shipping(IMAGE_DIR_PATH+"crater.jpg","Crater", "-100", "One of your bags falls into the crater, you lose $100", "-100", Color.ORANGE , Color.BLACK);
-        fields[3] = new GUI_Shipping(IMAGE_DIR_PATH+"palacegates.png","Palace gates", "+100", " You sell your goods on the market beside palace gates, you earned $100", "+100", Color.GREEN , Color.BLACK);
-        fields[4] = new GUI_Shipping(IMAGE_DIR_PATH+"colddesert.jpg","Cold desert", "-20", "You had to pay $20 to a beduin to access the oasis in a cold desert.", "-20", Color.ORANGE , Color.BLACK);
-        fields[5] = new GUI_Shipping(IMAGE_DIR_PATH+"walledcity.jpg","Walled City", "+180", "You enter the rich walled city. They give you $180! Nice people.", "+180", Color.GREEN , Color.BLACK);
-        fields[6] = new GUI_Shipping(IMAGE_DIR_PATH+"monastery.jpg","Monastery", "0", "You visit a monastery. Nothing happens here. Boring.", "0", Color.YELLOW , Color.BLACK);
-        fields[7] = new GUI_Shipping(IMAGE_DIR_PATH+"blackcave.png","Black Cave", "-70", "You get robbed while sleeping in a black cave, angry bandits took $70", "-70", Color.ORANGE , Color.BLACK);
-        fields[8] = new GUI_Shipping(IMAGE_DIR_PATH+"hutsinthemountain.jpg","Huts in the mountain", "+60", "You help elderly people living in the mountains with wood chopping. As a reward they give you $60", "+60", Color.GREEN , Color.BLACK);
-        fields[9] = new GUI_Shipping(IMAGE_DIR_PATH+"werewall.jpg","The Werewall", "-80", "The werewolves demand payment from you for not eating you alive. You pay them $80 and run as fast as you can from the Werewall. You get an extra turn", "-80", Color.YELLOW , Color.BLACK);
-        fields[10] = new GUI_Shipping(IMAGE_DIR_PATH+"thepit.jpg","The Pit", "-50", "While falling into the pit your gold stash opens and you lose $50. Watch out next time maybe?", "-50", Color.ORANGE , Color.BLACK);
-        fields[11] = new GUI_Shipping(IMAGE_DIR_PATH+"goldmine.jpg","Goldmine", "+650", "While visiting an old goldmine you find a big chunk of gold! You sell it for $650 in the nearby city. You're rich now. Wow.", "+650", Color.green , Color.BLACK);
+        fields[0] = new GUI_Shipping(IMAGE_DIR_PATH+"freepark.png","Gratis", "Parkering", "Gratis Parkering", "", Color.WHITE, Color.BLACK);
+        fields[1] = new GUI_Shipping(IMAGE_DIR_PATH+"arcade.png","Spillehallen", "$3", "Spillehallen", "", Color.RED, Color.BLACK);
+        fields[2] = new GUI_Shipping(IMAGE_DIR_PATH+"cinema.png","Biografen", "$3", "", "", Color.RED, Color.BLACK);
+        fields[3] = new GUI_Shipping(IMAGE_DIR_PATH+"chance.png","Chance", "", "", "", Color.WHITE, Color.BLACK);
+        fields[4] = new GUI_Shipping(IMAGE_DIR_PATH+"toystore.png","Legetøjsbutik", "$3", "", "", Color.YELLOW, Color.BLACK);
+        fields[5] = new GUI_Shipping(IMAGE_DIR_PATH+"petstore.png","Dyrehandlen", "$3", "", "", Color.YELLOW, Color.BLACK);
+        fields[6] = new GUI_Shipping(IMAGE_DIR_PATH+"gotoprison.png","Gå i", "Fængsel", "", "", Color.WHITE, Color.BLACK);
+        fields[7] = new GUI_Shipping(IMAGE_DIR_PATH+"bowling.png","Bowlinghallen", "$4", "", "", Color.GREEN, Color.BLACK);
+        fields[8] = new GUI_Shipping(IMAGE_DIR_PATH+"zoo.png","Zoo", "$4", "", "", Color.GREEN, Color.BLACK);
+        fields[9] = new GUI_Shipping(IMAGE_DIR_PATH+"chance.png","Chance", "", "", "", Color.WHITE, Color.BLACK);
+        fields[10] = new GUI_Shipping(IMAGE_DIR_PATH+"waterpark.png","Vandlandet", "$5", "", "", Color.BLUE, Color.BLACK);
+        fields[11] = new GUI_Shipping(IMAGE_DIR_PATH+"beach.png","Strandpromenaden", "$5", "", "+650", Color.BLUE, Color.BLACK);
+        fields[12] = new GUI_Shipping(IMAGE_DIR_PATH+"start.png","Start", "", "Modtag $2", "", Color.WHITE, Color.BLACK);
+        fields[13] = new GUI_Shipping(IMAGE_DIR_PATH+"burgerbar.png","Burgerbaren", "$1", "", "", Color.ORANGE, Color.BLACK);
+        fields[14] = new GUI_Shipping(IMAGE_DIR_PATH+"pizzahouse.png","Pizzariaet", "$1", "", "", Color.ORANGE, Color.BLACK);
+        fields[15] = new GUI_Shipping(IMAGE_DIR_PATH+"chance.png","Chance", "", "", "", Color.WHITE, Color.BLACK);
+        fields[16] = new GUI_Shipping(IMAGE_DIR_PATH+"candystore.png","Slikbutikken", "$1", "", "", Color.CYAN, Color.BLACK);
+        fields[17] = new GUI_Shipping(IMAGE_DIR_PATH+"icecreamshop.png","Iskiosken", "$1", "", "", Color.CYAN, Color.BLACK);
+        fields[18] = new GUI_Shipping(IMAGE_DIR_PATH+"inprison.png","I Fængsel", "", "", "", Color.WHITE, Color.BLACK);
+        fields[19] = new GUI_Shipping(IMAGE_DIR_PATH+"museum.png","Museet", "$2", "", "", Color.MAGENTA, Color.BLACK);
+        fields[20] = new GUI_Shipping(IMAGE_DIR_PATH+"library.png","Biblioteket", "$2", "", "", Color.MAGENTA, Color.BLACK);
+        fields[21] = new GUI_Shipping(IMAGE_DIR_PATH+"chance.png","Chance", "", "", "", Color.WHITE, Color.BLACK);
+        fields[22] = new GUI_Shipping(IMAGE_DIR_PATH+"skatepark.png","Skateparken", "$2", "", "", Color.PINK, Color.BLACK);
+        fields[23] = new GUI_Shipping(IMAGE_DIR_PATH+"swimmingpool.png","Swimmingpoolen", "$2", "", "", Color.PINK, Color.BLACK);
     }
 
 
