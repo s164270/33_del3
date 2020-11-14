@@ -9,6 +9,7 @@ import java.awt.*;
 public class Player
 {
 
+    private int position = 0;
     private Account account;
     private String playerName;
     private GUI_Player gui_player;
@@ -52,6 +53,27 @@ public class Player
         GUI_Car car = new GUI_Car();
         car.setPrimaryColor(Color.RED);
         gui_player = new GUI_Player(playerName, account.getBalance(), car);
+    }
+
+    public int getPosition() {
+        return position;
+    }
+
+    public void move(int distance)
+    {
+        if(distance < 0 || distance > 24)
+        {
+            throw new IllegalArgumentException("distance can't be <0 or be >24");
+        }
+
+        if(position + distance < 24)
+        {
+            position = position + distance;
+        }
+        else
+        {
+            position = (position + distance) - 24;
+        }
     }
 
     public String getName()

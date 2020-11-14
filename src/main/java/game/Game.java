@@ -70,7 +70,7 @@ public class Game
     public void rollDice()
     {
         dice.rollDice();
-        gui.setDice(dice.getDice1(), dice.getDice2());
+        gui.setDie(dice.getDice1());
     }
 
     public void turn(Player player)
@@ -78,13 +78,9 @@ public class Game
         gui.showMessage("It is " + player.getName() + "'s turn");
 
         rollDice();
-        movePlayer(player, dice.getSum());
+        movePlayer(player, dice.getDice1());
         gameOver();
-
-        if(dice.getSum() != 10)
-        {
-            changePlayer();
-        }
+        changePlayer();
     }
 
     public void gameOver()
@@ -121,32 +117,14 @@ public class Game
 
     public void movePlayer(Player player, int roll)
     {
-        Player otherPlayer;
-        if (player==player1)
-        {
-            otherPlayer=player2;
-        }
-        else
-        {
-            otherPlayer=player1;
-        }
 
-        for (int i = 0; i<12; i++)
-        {
-            if(fields[i].hasCar(otherPlayer.getGuiPlayer()))
-            {
-                fields[i].removeAllCars();
-                fields[i].setCar(otherPlayer.getGuiPlayer(), true);
-            }
-            else
-            {
-                fields[i].removeAllCars();
-            }
-        }
 
-        fields[roll-1].setCar(player.getGuiPlayer(), true);
+        fields[player.getPosition()].setCar(player.getGuiPlayer(), false);
+        player.move(roll);
+        fields[player.getPosition()].setCar(player.getGuiPlayer(), true);
+
         //player.addPoints(Integer.parseInt(fields[roll-1].getSubText()));
-        gui.showMessage(fields[roll-1].getDescription());
+        //gui.showMessage(fields[roll-1].getDescription());
     }
 
     public void createField()
