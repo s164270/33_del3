@@ -1,6 +1,7 @@
 package game;
 
 import gui_fields.GUI_Field;
+import gui_fields.GUI_Player;
 import gui_fields.GUI_Shipping;
 import gui_main.GUI;
 import player.Player;
@@ -33,18 +34,12 @@ public class GameBoard
         guiFields[player.getPosition()].setCar(player.getGuiPlayer(), false);
         player.move(distance);
         guiFields[player.getPosition()].setCar(player.getGuiPlayer(), true);
-        fields[player.getPosition()].landOnField();
+        fields[player.getPosition()].landOnField(player);
         gui.showMessage(player.getName() + " landede på " + guiFields[player.getPosition()].getTitle());
     }
 
     public GUI_Field[] getGuiFields() {
         return guiFields;
-    }
-
-    public void landOnField(int fieldIndex, Player player)
-    {
-        fields[fieldIndex].landOnField();
-        guiFields[fieldIndex].getDescription();
     }
 
     public void setField(int fieldIndex, Field field)
@@ -54,9 +49,35 @@ public class GameBoard
 
     private void createFields()
     {
+        fields[1] = new PropertyField("felt nummer 1", 3);
+        fields[2] = new PropertyField("felt nummer 2", 3, (PropertyField) fields[1]);
+
+        fields[4] = new PropertyField("felt nummer 4", 3);
+        fields[5] = new PropertyField("felt nummer 5", 3, (PropertyField) fields[4]);
+
+        fields[7] = new PropertyField("felt nummer 7", 4);
+        fields[8] = new PropertyField("felt nummer 8", 4, (PropertyField) fields[7]);
+
+        fields[10] = new PropertyField("felt nummer 10", 5);
+        fields[11] = new PropertyField("felt nummer 11", 5, (PropertyField) fields[10]);
+
+        fields[13] = new PropertyField("felt nummer 13", 1);
+        fields[14] = new PropertyField("felt nummer 14", 1, (PropertyField) fields[13]);
+
+        fields[16] = new PropertyField("felt nummer 16", 1);
+        fields[17] = new PropertyField("felt nummer 17", 1, (PropertyField) fields[16]);
+
+        fields[19] = new PropertyField("felt nummer 19", 2);
+        fields[20] = new PropertyField("felt nummer 20", 2, (PropertyField) fields[19]);
+
+        fields[22] = new PropertyField("felt nummer 22", 2);
+        fields[23] = new PropertyField("felt nummer 23", 2, (PropertyField) fields[22]);
+
         for(int i = 0; i < NFIELDS; i++)
         {
-            fields[i] = new Field("felt nummer " + i);
+            if(fields[i] == null)  {
+                fields[i] = new Field("felt nummer " + i);
+            }
         }
     }
 
@@ -88,13 +109,7 @@ public class GameBoard
         guiFields[21] = new GUI_Shipping(IMAGE_DIR_PATH+"chance.png","Chance", "", "", "", Color.WHITE, Color.BLACK);
         guiFields[22] = new GUI_Shipping(IMAGE_DIR_PATH+"skatepark.png","Skateparken", "$2", "", "", Color.PINK, Color.BLACK);
         guiFields[23] = new GUI_Shipping(IMAGE_DIR_PATH+"swimmingpool.png","Swimmingpoolen", "$2", "", "", Color.PINK, Color.BLACK);
-    }
+        guiFields[22].setForeGroundColor(Color.RED);
 
-
-    public void test1()
-    {
-        fields[0].landOnField();
-        fields[1].landOnField();
-        fields[23].landOnField();
     }
 }

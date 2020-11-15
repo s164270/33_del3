@@ -9,7 +9,7 @@ import java.awt.*;
 public class Player
 {
 
-    private int position = 0;
+    private int position = 12;
     private Account account;
     private String playerName;
     private GUI_Player gui_player;
@@ -18,7 +18,7 @@ public class Player
     {
         try
         {
-            account = new Account(1000);
+            account = new Account(20);
             playerName = gui.getUserString("Input player name");
             String col = gui.getUserSelection("Choose color for " + playerName, "BLACK",
                     "BLUE",
@@ -49,7 +49,7 @@ public class Player
     public Player(String playerName)
     {
         this.playerName=playerName;
-        account = new Account(1000);
+        account = new Account(20);
         GUI_Car car = new GUI_Car();
         car.setPrimaryColor(Color.RED);
         gui_player = new GUI_Player(playerName, account.getBalance(), car);
