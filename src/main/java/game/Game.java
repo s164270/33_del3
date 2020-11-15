@@ -45,7 +45,8 @@ public class Game
         GUI.setNull_fields_allowed(true);
 
         board = new GameBoard();
-        gui = new GUI(board.getGuiFields(), Color.WHITE);
+        gui = new GUI(
+                board.getGuiFields(), Color.WHITE);
 
         gameOver = false;
 
