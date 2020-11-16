@@ -20,4 +20,7 @@ public class Field {
         System.out.println("landede på " + name);
     }
 
+    public void visitField(Player player)
+    {
+    }
 }

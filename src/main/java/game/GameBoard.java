@@ -32,7 +32,12 @@ public class GameBoard
     public void movePlayer(Player player, int distance){
 
         guiFields[player.getPosition()].setCar(player.getGuiPlayer(), false);
-        player.move(distance);
+        while(distance > 0)
+        {
+            player.move(1);
+            fields[player.getPosition()].visitField(player);
+            distance--;
+        }
         guiFields[player.getPosition()].setCar(player.getGuiPlayer(), true);
         fields[player.getPosition()].landOnField(player);
         gui.showMessage(player.getName() + " landede på " + guiFields[player.getPosition()].getTitle());
@@ -49,6 +54,7 @@ public class GameBoard
 
     private void createFields()
     {
+        fields[0] = new StartField();
         fields[1] = new PropertyField("felt nummer 1", 1);
         fields[2] = new PropertyField("felt nummer 2", 1, (PropertyField) fields[1]);
 
