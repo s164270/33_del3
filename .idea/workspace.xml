@@ -14,63 +14,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="99829fea-4061-4558-8b87-0cb6782c5392" name="Default Changelist" comment="init commit">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/chancecard/chance.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/img/blackcave.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/img/colddesert.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/img/crater.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/img/face.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/img/goldmine.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/img/hutsinthemountain.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/img/images.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/img/monastery.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/img/palacegates.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/img/thepit.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/img/tower.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/img/walledcity.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/img/werewall.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/game/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/game/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/img/animalstore.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/img/animalstore.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/img/arcade.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/img/arcade.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/img/beach.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/img/beach.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/img/blackcave.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/img/bowling.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/img/bowling.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/img/burgerbar.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/img/burgerbar.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/img/candystore.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/img/candystore.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/img/chance.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/img/chance.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/img/cinema.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/img/cinema.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/img/colddesert.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/img/crater.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/img/face.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/img/freepark.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/img/freepark.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/img/goldmine.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/img/gotoprison.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/img/gotoprison.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/img/hutsinthemountain.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/img/icecreamshop.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/img/icecreamshop.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/img/images.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/img/inprision.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/img/inprison.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/img/library.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/img/library.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/img/monastery.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/img/museum.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/img/museum.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/img/palacegates.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/img/petstore.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/img/petstore.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/img/pizzahouse.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/img/pizzahouse.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/img/skatepark.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/img/skatepark.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/img/start.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/img/swimmingpool.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/img/swimmingpool.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/img/thepit.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/img/tower.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/img/toystore.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/img/toystore.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/img/walledcity.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/img/waterpark.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/img/waterpark.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/img/werewall.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/img/zoo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/img/zoo.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -78,7 +36,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.1\plugins\maven\lib\maven3" />
+        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -100,6 +58,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -158,6 +117,7 @@
       <workItem from="1605266113750" duration="290000" />
       <workItem from="1605267268843" duration="1252000" />
       <workItem from="1605305513994" duration="9467000" />
+      <workItem from="1605535429532" duration="4441000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1605265466312</created>
@@ -205,22 +165,26 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="424" y="231" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1280.680@0.0.1280.680" timestamp="1605267492973" />
-    <state width="1237" height="68" key="GridCell.Tab.0.bottom" timestamp="1605314970688">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1237" height="162" key="GridCell.Tab.0.bottom" timestamp="1605539461256">
+      <screen x="0" y="23" width="1440" height="808" />
     </state>
     <state width="1237" height="68" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1605314970688" />
-    <state width="1237" height="68" key="GridCell.Tab.0.center" timestamp="1605314970688">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1237" height="162" key="GridCell.Tab.0.bottom/0.23.1440.808@0.23.1440.808" timestamp="1605539461256" />
+    <state width="1237" height="162" key="GridCell.Tab.0.center" timestamp="1605539461255">
+      <screen x="0" y="23" width="1440" height="808" />
     </state>
     <state width="1237" height="68" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1605314970688" />
-    <state width="1237" height="68" key="GridCell.Tab.0.left" timestamp="1605314970687">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1237" height="162" key="GridCell.Tab.0.center/0.23.1440.808@0.23.1440.808" timestamp="1605539461255" />
+    <state width="1237" height="162" key="GridCell.Tab.0.left" timestamp="1605539461255">
+      <screen x="0" y="23" width="1440" height="808" />
     </state>
     <state width="1237" height="68" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1605314970687" />
-    <state width="1237" height="68" key="GridCell.Tab.0.right" timestamp="1605314970688">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1237" height="162" key="GridCell.Tab.0.left/0.23.1440.808@0.23.1440.808" timestamp="1605539461255" />
+    <state width="1237" height="162" key="GridCell.Tab.0.right" timestamp="1605539461256">
+      <screen x="0" y="23" width="1440" height="808" />
     </state>
     <state width="1237" height="68" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1605314970688" />
+    <state width="1237" height="162" key="GridCell.Tab.0.right/0.23.1440.808@0.23.1440.808" timestamp="1605539461256" />
     <state x="440" y="61" key="RollbackChangesDialog" timestamp="1605267534047">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

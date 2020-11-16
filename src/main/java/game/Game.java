@@ -1,5 +1,6 @@
 package game;
 
+import chancecard.chance;
 import dice.DiceCup;
 import gui_fields.*;
 import gui_main.GUI;
@@ -18,6 +19,7 @@ public class Game
     private GUI_Field[] fields;
     private Player currentPlayer;
     private boolean gameOver;
+    private chance chanceCard;
 
     public Game()
     {
@@ -39,6 +41,7 @@ public class Game
         gui.addPlayer(player2.getGuiPlayer());
         gui.showMessage("Okay " + player1.getName() + ", you start.");
         currentPlayer = player1;
+        chanceCard = new chance();
     }
 
     public Game(String playerName1, String playerName2)
