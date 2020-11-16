@@ -5,6 +5,11 @@ import gui_fields.GUI_Player;
 import gui_main.GUI;
 
 import java.awt.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collector;
 
 public class Player
 {
@@ -13,6 +18,20 @@ public class Player
     private Account account;
     private String playerName;
     private GUI_Player gui_player;
+    private static String[] colors = {"BLUE",
+            "CYAN",
+            "DARK_GRAY",
+            "GRAY",
+            "GREEN",
+            "LIGHT_GRAY",
+            "MAGENTA",
+            "ORANGE",
+            "PINK",
+            "RED",
+            "WHITE",
+            "YELLOW"};
+
+
 
     public Player(GUI gui)
     {
@@ -20,23 +39,17 @@ public class Player
         {
             account = new Account(20);
             playerName = gui.getUserString("Input player name");
-            String col = gui.getUserSelection("Choose color for " + playerName, "BLACK",
-                    "BLUE",
-                    "CYAN",
-                    "DARK_GRAY",
-                    "GRAY",
-                    "GREEN",
-                    "LIGHT_GRAY",
-                    "MAGENTA",
-                    "ORANGE",
-                    "PINK",
-                    "RED",
-                    "WHITE",
-                    "YELLOW"
+            String col = gui.getUserSelection("Choose color for " + playerName,
+                    colors
             );
+
             Color i = (Color) Color.class.getDeclaredField(col).get(null);
             GUI_Car car = new GUI_Car();
             car.setPrimaryColor(i);
+            List<String> list = new ArrayList<String>(Arrays.asList(colors));
+            list.removeAll(Collections.singleton((col)));
+            colors = new String[list.size()];
+            colors = list.toArray(colors);
             gui_player = new GUI_Player(playerName, account.getBalance(), car);
         } catch (IllegalAccessException e)
         {
