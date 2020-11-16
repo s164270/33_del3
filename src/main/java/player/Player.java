@@ -9,7 +9,7 @@ import java.awt.*;
 public class Player
 {
 
-    private int position = 12;
+    private int position = 0;
     private Account account;
     private String playerName;
     private GUI_Player gui_player;
