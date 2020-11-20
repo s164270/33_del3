@@ -7,12 +7,12 @@ import player.Player;
 
 import java.awt.*;
 import java.io.File;
+import java.util.Arrays;
 
 public class Game
 {
 
-    private final Player player1;
-    private final Player player2;
+    private Player player[];
     private final DiceCup dice;
     private final GameBoard board;
     private GUI gui;
@@ -29,18 +29,14 @@ public class Game
         board.setGui(gui);
         gameOver = false;
 
-
         gui.showMessage("Welcome to the game!\n");
-        player1 = new Player(gui);
-        player2 = new Player(gui);
-        gui.addPlayer(player1.getGuiPlayer());
-        gui.addPlayer(player2.getGuiPlayer());
-        gui.showMessage("Okay " + player1.getName() + ", you start.");
-        currentPlayer = player1;
+        createPlayers();
+        gui.showMessage("Okay " + currentPlayer.getName() + ", you start.");
     }
 
     public Game(String playerName1, String playerName2)
     {
+        // class creation for testing
         dice = new DiceCup();
         GUI.setNull_fields_allowed(true);
 
@@ -50,11 +46,33 @@ public class Game
 
         gameOver = false;
 
-        player1 = new Player(playerName1);
-        player2 = new Player(playerName2);
-        gui.addPlayer(player1.getGuiPlayer());
-        gui.addPlayer(player2.getGuiPlayer());
-        currentPlayer = player1;
+        player[0] = new Player(playerName1);
+        player[1] = new Player(playerName2);
+        gui.addPlayer(player[0].getGuiPlayer());
+        currentPlayer = player[0];
+    }
+
+    private void createPlayers()
+    {
+
+        int numPlayers = gui.getUserInteger("Chose number of players",2,4);
+        player=new Player[numPlayers];
+        int minAge = 999;
+        int minAgeIndex = 0;
+        int age;
+        for (int i = 0; i < numPlayers; i++)
+        {
+            player[i] = new Player(gui);
+            gui.addPlayer(player[i].getGuiPlayer());
+            age = gui.getUserInteger("What is "+ player[i].getName()+" age?");
+            if (age < minAge)
+            {
+                minAge=age;
+                minAgeIndex=i;
+            }
+        }
+
+        currentPlayer = player[minAgeIndex];
     }
 
     public boolean isGameOver() {
@@ -103,13 +121,14 @@ public class Game
 
     public void changePlayer()
     {
-        if (currentPlayer==player1)
+        int index =Arrays.asList(player).indexOf(currentPlayer);
+        if (index>= player.length-1)
         {
-            currentPlayer = player2;
+            currentPlayer=player[0];
         }
         else
         {
-            currentPlayer = player1;
+            currentPlayer=player[index+1];
         }
     }
 
