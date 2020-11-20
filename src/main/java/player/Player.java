@@ -86,7 +86,15 @@ public class Player
         else
         {
             position = (position + distance) - 24;
+    }
+            /*if(position == 18)
+            {
+                position = 6;
+            }*/
         }
+
+    public void setPosition(int position) {
+        this.position = position;
     }
 
     public String getName()

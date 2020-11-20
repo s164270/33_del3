@@ -20,8 +20,8 @@ public class GameBoard
     {
         fields = new Field[NFIELDS];
         guiFields = new GUI_Field[NFIELDS];
-        createFields();
         createGuiFields();
+        createFields();
     }
 
     public void setGui(GUI gui)
@@ -30,7 +30,7 @@ public class GameBoard
     }
 
     public void movePlayer(Player player, int distance){
-
+        String msg;
         guiFields[player.getPosition()].setCar(player.getGuiPlayer(), false);
         while(distance > 0)
         {
@@ -38,9 +38,10 @@ public class GameBoard
             fields[player.getPosition()].visitField(player);
             distance--;
         }
+        msg = fields[player.getPosition()].landOnField(player);
         guiFields[player.getPosition()].setCar(player.getGuiPlayer(), true);
-        fields[player.getPosition()].landOnField(player);
-        gui.showMessage(player.getName() + " landede på " + guiFields[player.getPosition()].getTitle());
+        gui.showMessage(msg);
+
     }
 
     public GUI_Field[] getGuiFields() {
@@ -58,9 +59,11 @@ public class GameBoard
         fields[1] = new PropertyField("felt nummer 1", 1);
         fields[2] = new PropertyField("felt nummer 2", 1, (PropertyField) fields[1]);
 
+
         fields[4] = new PropertyField("felt nummer 4", 1);
         fields[5] = new PropertyField("felt nummer 5", 1, (PropertyField) fields[4]);
 
+        fields[6] = new JailField("felt nummer 6", 0, false);
         fields[7] = new PropertyField("felt nummer 7", 2);
         fields[8] = new PropertyField("felt nummer 8", 2, (PropertyField) fields[7]);
 
@@ -73,6 +76,8 @@ public class GameBoard
         fields[16] = new PropertyField("felt nummer 16", 3);
         fields[17] = new PropertyField("felt nummer 17", 3, (PropertyField) fields[16]);
 
+        fields[18] = new JailField("felt nummer 18", 1,true);
+
         fields[19] = new PropertyField("felt nummer 19", 4);
         fields[20] = new PropertyField("felt nummer 20", 4, (PropertyField) fields[19]);
 
@@ -82,8 +87,13 @@ public class GameBoard
         for(int i = 0; i < NFIELDS; i++)
         {
             if(fields[i] == null)  {
-                fields[i] = new Field("felt nummer " + i);
+                fields[i] = new Field("et chancefelt");
             }
+        }
+
+        for(int i = 0; i < NFIELDS; i++)
+        {
+            fields[i].setGuiField(guiFields[i]);
         }
     }
 

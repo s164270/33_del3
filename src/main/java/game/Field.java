@@ -1,9 +1,15 @@
 package game;
 
+import gui_fields.GUI_Field;
 import player.Player;
 
 public class Field {
     private String name;
+    protected GUI_Field guiField;
+
+    public void setGuiField(GUI_Field guiField) {
+        this.guiField = guiField;
+    }
 
     public Field()
     {
@@ -15,9 +21,9 @@ public class Field {
         this.name = name;
     }
 
-    public void landOnField(Player player)
+    public String landOnField(Player player)
     {
-        System.out.println("landede på " + name);
+        return player.getName() + " " + "landede på " + name;
     }
 
     public void visitField(Player player)

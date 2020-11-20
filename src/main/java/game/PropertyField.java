@@ -1,6 +1,7 @@
 package game;
 
 import player.Player;
+import gui_fields.GUI_Field;
 
 public class PropertyField extends Field{
     private int cost;
@@ -42,7 +43,7 @@ public class PropertyField extends Field{
     }
 
     @Override
-    public void landOnField(Player player) {
+    public String landOnField(Player player) {
 
         if(owner == null) //player has to buy the property
         {
@@ -67,5 +68,6 @@ public class PropertyField extends Field{
                 owner.addPoints(cost);
             }
         }
+        return player.getName() + " " +  "landede på ejendomsfeltet" + " " + guiField.getTitle();
     }
 }
