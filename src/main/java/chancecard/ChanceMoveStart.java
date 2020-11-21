@@ -21,9 +21,9 @@ public class ChanceMoveStart extends Chance
 
 
     @Override
-    public void executeChance()
+    public void executeChance(Player currentPlayer)
     {
-        super.executeChance();
-        gui.showMessage("lol");
+        gui.showMessage(text);
+        board.movePlayerPosition(currentPlayer,0);
     }
 }

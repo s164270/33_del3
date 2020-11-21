@@ -30,13 +30,13 @@ public abstract class Chance
     {
         this.col1 = col1;
         this.col2 = col2;
-        this.text = "";
+        this.text = text;
         this.board=board;
         this.gui=gui;
         this.player=player;
     }
 
-    public void executeChance()
+    public void executeChance(Player currentPlayer)
     {
 
     }
