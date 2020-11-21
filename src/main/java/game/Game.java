@@ -42,12 +42,14 @@ public class Game
 
         board = new GameBoard();
         gui = new GUI(board.getGuiFields(), Color.WHITE);
-
+        board.setGui(gui);
         gameOver = false;
 
+        player=new Player[2];
         player[0] = new Player(playerName1);
         player[1] = new Player(playerName2);
         gui.addPlayer(player[0].getGuiPlayer());
+        gui.addPlayer(player[1].getGuiPlayer());
         currentPlayer = player[0];
     }
 
@@ -137,5 +139,9 @@ public class Game
 
     }
 
+    public void testFunction()
+    {
+        board.movePlayerPosition(currentPlayer,15);
+    }
 
 }

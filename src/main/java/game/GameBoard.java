@@ -43,6 +43,19 @@ public class GameBoard
         gui.showMessage(player.getName() + " landede på " + guiFields[player.getPosition()].getTitle());
     }
 
+    public void movePlayerPosition(Player player, int position){
+
+        guiFields[player.getPosition()].setCar(player.getGuiPlayer(), false);
+        while(player.getPosition()!= position)
+        {
+            player.move(1);
+            fields[player.getPosition()].visitField(player);
+        }
+        guiFields[player.getPosition()].setCar(player.getGuiPlayer(), true);
+        fields[player.getPosition()].landOnField(player);
+        gui.showMessage(player.getName() + " landede på " + guiFields[player.getPosition()].getTitle());
+    }
+
     public GUI_Field[] getGuiFields() {
         return guiFields;
     }
