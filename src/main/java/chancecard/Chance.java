@@ -26,6 +26,16 @@ public abstract class Chance
         this.player=player;
     }
 
+    public Chance(GameBoard board, GUI gui, Player[] player, String text, Color col1, Color col2)
+    {
+        this.col1 = col1;
+        this.col2 = col2;
+        this.text = "";
+        this.board=board;
+        this.gui=gui;
+        this.player=player;
+    }
+
     public void executeChance()
     {
 
