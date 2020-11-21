@@ -5,11 +5,10 @@ import gui_fields.GUI_Chance;
 import java.awt.*;
 import java.util.Random;
 
-import static java.lang.Math.random;
-
-public class chance {
+public class ChanceCards
+{
     private GUI_Chance[] chances= new GUI_Chance[24];
-    public chance()
+    public ChanceCards()
     {
         createChance();
     }

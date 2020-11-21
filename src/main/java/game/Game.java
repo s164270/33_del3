@@ -1,5 +1,7 @@
 package game;
 
+import chancecard.Chance;
+import chancecard.ChanceMoveStart;
 import dice.DiceCup;
 import gui_fields.*;
 import gui_main.GUI;
@@ -12,10 +14,11 @@ import java.util.Arrays;
 public class Game
 {
 
-    private Player player[];
+
     private final DiceCup dice;
     private final GameBoard board;
     private GUI gui;
+    private Player[] player;
     private Player currentPlayer;
     private boolean gameOver;
 
@@ -141,6 +144,8 @@ public class Game
 
     public void testFunction()
     {
+        Chance card= new ChanceMoveStart(board, gui, player );
+        card.executeChance();
         board.movePlayerPosition(currentPlayer,15);
     }
 
