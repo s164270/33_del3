@@ -27,11 +27,11 @@ public class ChanceCards
     {
         chances[0] = new ChanceMoveStart(board, gui, player,"Ryk frem til START\n Modtag M2", Color.BLUE,Color.ORANGE);
         chances[1] = new ChanceMove5(board, gui, player,"Ryk frem 5 felter", Color.BLUE,Color.ORANGE);
-        chances[2] = new ChanceMoveStart(board, gui, player,"Ryk frem til START\n Modtag M2", Color.BLUE,Color.ORANGE);
-        chances[3] = new ChanceMoveStart(board, gui, player,"Ryk frem til START\n Modtag M2", Color.BLUE,Color.ORANGE);
-        chances[4] = new ChanceMoveStart(board, gui, player,"Ryk frem til START\n Modtag M2", Color.BLUE,Color.ORANGE);
-        chances[5] = new ChanceMoveStart(board, gui, player,"Ryk frem til START\n Modtag M2", Color.BLUE,Color.ORANGE);
-        chances[6] = new ChanceMoveStart(board, gui, player,"Ryk frem til START\n Modtag M2", Color.BLUE,Color.ORANGE);
+        chances[2] = new ChanceBirthday(board, gui, player,"Det er din fødselsdag! Alle giver dig M1!\n Tillykke med fødselsdagen!", Color.BLUE,Color.ORANGE);
+        chances[3] = new ChanceFreeJail(board, gui, player,"Du løslades uden omkostninger\n Behold dette kort intil du får brug for det.", Color.BLUE,Color.ORANGE);
+        chances[4] = new ChanceGet2(board, gui, player,"Du har lavet alle dine lektier!\n Modtag M2 fra banken", Color.BLUE,Color.ORANGE);
+        chances[5] = new ChanceMoveToBeach(board, gui, player,"Ryk frem til STRANDPROMENADEN", Color.BLUE,Color.ORANGE);
+        chances[6] = new ChancePay2(board, gui, player,"Du har spist for meget slik\n BETAL M2 til banken", Color.BLUE,Color.ORANGE);
         chances[7] = new ChanceMoveStart(board, gui, player,"Ryk frem til START\n Modtag M2", Color.BLUE,Color.ORANGE);
         chances[8] = new ChanceMoveStart(board, gui, player,"Ryk frem til START\n Modtag M2", Color.BLUE,Color.ORANGE);
         chances[9] = new ChanceMoveStart(board, gui, player,"Ryk frem til START\n Modtag M2", Color.BLUE,Color.ORANGE);
