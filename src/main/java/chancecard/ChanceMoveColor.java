@@ -1,6 +1,7 @@
 package chancecard;
 
 import game.GameBoard;
+import game.PropertyField;
 import gui_main.GUI;
 import player.Player;
 
@@ -35,6 +36,10 @@ public class ChanceMoveColor extends Chance
         {
             if(board.getGuiFields()[i].getTitle().equals(choice))
             {
+                if(board.getGuiFields()[i].getTitle().equals(choice))
+                {
+                    board.getField()[i].setOwner(currentPlayer);
+                }
                 board.movePlayerPosition(currentPlayer,i);
                 return;
             }
