@@ -1,16 +1,11 @@
 package game;
 
-import chancecard.Chance;
-import chancecard.ChanceMove5;
-import chancecard.ChanceMoveStart;
-import chancecard.ChancePay2;
+import chancecard.*;
 import dice.DiceCup;
-import gui_fields.*;
 import gui_main.GUI;
 import player.Player;
 
 import java.awt.*;
-import java.io.File;
 import java.util.Arrays;
 
 public class Game
@@ -50,11 +45,13 @@ public class Game
         board.setGui(gui);
         gameOver = false;
 
-        player=new Player[2];
+        player=new Player[3];
         player[0] = new Player(playerName1);
         player[1] = new Player(playerName2);
+        player[2] = new Player("playerName3");
         gui.addPlayer(player[0].getGuiPlayer());
         gui.addPlayer(player[1].getGuiPlayer());
+        gui.addPlayer(player[2].getGuiPlayer());
         currentPlayer = player[0];
     }
 
@@ -146,7 +143,7 @@ public class Game
 
     public void testFunction()
     {
-        Chance card= new ChancePay2(board, gui, player,"Ryk frem til START\n Modtag M2", Color.BLUE,Color.ORANGE);
+        Chance card= new ChanceBirthday(board, gui, player,"Ryk frem til START\n Modtag M2", Color.BLUE,Color.ORANGE);
         card.executeChance(currentPlayer);
         //board.movePlayerPosition(currentPlayer,15);
     }
