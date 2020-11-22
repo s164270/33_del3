@@ -1,9 +1,6 @@
 package game;
 
-import chancecard.Chance;
-import chancecard.ChanceMove5;
-import chancecard.ChanceMoveStart;
-import chancecard.ChancePay2;
+import chancecard.*;
 import dice.DiceCup;
 import gui_fields.*;
 import gui_main.GUI;
@@ -146,7 +143,7 @@ public class Game
 
     public void testFunction()
     {
-        Chance card= new ChancePay2(board, gui, player,"Ryk frem til START\n Modtag M2", Color.BLUE,Color.ORANGE);
+        Chance card= new ChanceMoveColor(board, gui, player,"Ryk frem til et orange felt", Color.BLUE,Color.ORANGE, new String[]{"Burgerbaren","Pizzariaet"});
         card.executeChance(currentPlayer);
         //board.movePlayerPosition(currentPlayer,15);
     }
