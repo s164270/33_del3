@@ -1,5 +1,7 @@
 package player;
 
+import chancecard.ChanceMoveColor;
+import chancecard.ChanceMovePlayer;
 import gui_fields.GUI_Car;
 import gui_fields.GUI_Player;
 import gui_main.GUI;
@@ -17,6 +19,7 @@ public class Player
     private int position = 0;
     private Account account;
     private String playerName;
+    private ChanceMovePlayer chanceCard;
     private GUI_Player gui_player;
     private static String[] colors = {"BLUE",
             "CYAN",
@@ -117,4 +120,13 @@ public class Player
         return gui_player;
     }
 
+    public ChanceMovePlayer getChanceCard()
+    {
+        return chanceCard;
+    }
+
+    public void setChanceCard(ChanceMovePlayer chanceCard)
+    {
+        this.chanceCard = chanceCard;
+    }
 }

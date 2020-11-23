@@ -15,6 +15,8 @@ public abstract class Field {
         this.name = name;
     }
 
+
+
     public void landOnField(Player player)
     {
         System.out.println("landede på " + name);
@@ -24,7 +26,13 @@ public abstract class Field {
     {
     }
 
-    public void setOwner(Player currentPlayer)
+    public String getName()
     {
+        return name;
+    }
+
+    public void setName(String name)
+    {
+        this.name = name;
     }
 }

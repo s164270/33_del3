@@ -72,34 +72,34 @@ public class GameBoard
     private void createFields()
     {
         fields[0] = new StartField();
-        fields[1] = new PropertyField("felt nummer 1", 1);
-        fields[2] = new PropertyField("felt nummer 2", 1, (PropertyField) fields[1]);
+        fields[1] = new PropertyField("PropertyField 1", 1);
+        fields[2] = new PropertyField("PropertyField 2", 1, (PropertyField) fields[1]);
 
-        fields[4] = new PropertyField("felt nummer 4", 1);
-        fields[5] = new PropertyField("felt nummer 5", 1, (PropertyField) fields[4]);
+        fields[4] = new PropertyField("PropertyField 4", 1);
+        fields[5] = new PropertyField("PropertyField 5", 1, (PropertyField) fields[4]);
 
-        fields[7] = new PropertyField("felt nummer 7", 2);
-        fields[8] = new PropertyField("felt nummer 8", 2, (PropertyField) fields[7]);
+        fields[7] = new PropertyField("PropertyField 7", 2);
+        fields[8] = new PropertyField("PropertyField 8", 2, (PropertyField) fields[7]);
 
-        fields[10] = new PropertyField("felt nummer 10", 2);
-        fields[11] = new PropertyField("felt nummer 11", 2, (PropertyField) fields[10]);
+        fields[10] = new PropertyField("PropertyField 10", 2);
+        fields[11] = new PropertyField("PropertyField 11", 2, (PropertyField) fields[10]);
 
-        fields[13] = new PropertyField("felt nummer 13", 3);
-        fields[14] = new PropertyField("felt nummer 14", 3, (PropertyField) fields[13]);
+        fields[13] = new PropertyField("PropertyField 13", 3);
+        fields[14] = new PropertyField("PropertyField 14", 3, (PropertyField) fields[13]);
 
-        fields[16] = new PropertyField("felt nummer 16", 3);
-        fields[17] = new PropertyField("felt nummer 17", 3, (PropertyField) fields[16]);
+        fields[16] = new PropertyField("PropertyField 16", 3);
+        fields[17] = new PropertyField("PropertyField 17", 3, (PropertyField) fields[16]);
 
-        fields[19] = new PropertyField("felt nummer 19", 4);
-        fields[20] = new PropertyField("felt nummer 20", 4, (PropertyField) fields[19]);
+        fields[19] = new PropertyField("PropertyField 19", 4);
+        fields[20] = new PropertyField("PropertyField 20", 4, (PropertyField) fields[19]);
 
-        fields[22] = new PropertyField("felt nummer 22", 5);
-        fields[23] = new PropertyField("felt nummer 23", 5, (PropertyField) fields[22]);
+        fields[22] = new PropertyField("PropertyField 22", 5);
+        fields[23] = new PropertyField("PropertyField 23", 5, (PropertyField) fields[22]);
 
         for(int i = 0; i < NFIELDS; i++)
         {
             if(fields[i] == null)  {
-                fields[i] = new ParkingField("felt nummer " + i);
+                fields[i] = new ParkingField("ParkingField " + i);
             }
         }
     }

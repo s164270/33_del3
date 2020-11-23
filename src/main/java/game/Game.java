@@ -143,8 +143,10 @@ public class Game
 
     public void testFunction()
     {
-        Chance card= new ChanceMoveColor(board, gui, player,"Ryk frem til et orange felt", Color.BLUE,Color.ORANGE, new String[]{"Burgerbaren","Pizzariaet"});
+        Chance card= new ChanceMovePlayer(board, gui, player,"Ryk frem til et orange felt", Color.BLUE,Color.ORANGE, currentPlayer);
         card.executeChance(currentPlayer);
+        currentPlayer.getChanceCard().executeChance();
+        board.movePlayerPosition(player[1],2);
         //board.movePlayerPosition(currentPlayer,15);
     }
 

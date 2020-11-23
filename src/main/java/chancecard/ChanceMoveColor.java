@@ -38,7 +38,11 @@ public class ChanceMoveColor extends Chance
             {
                 if(board.getGuiFields()[i].getTitle().equals(choice))
                 {
-                    board.getField()[i].setOwner(currentPlayer);
+                    PropertyField field = (PropertyField) board.getField()[i];
+                    if (field.getOwner()==null)
+                    {
+                        field.setOwner(currentPlayer);
+                    }
                 }
                 board.movePlayerPosition(currentPlayer,i);
                 return;
