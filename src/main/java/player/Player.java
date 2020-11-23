@@ -1,6 +1,5 @@
 package player;
 
-import chancecard.ChanceMoveColor;
 import chancecard.ChanceMovePlayer;
 import gui_fields.GUI_Car;
 import gui_fields.GUI_Player;
@@ -21,6 +20,7 @@ public class Player
     private String playerName;
     private ChanceMovePlayer chanceCard;
     private GUI_Player gui_player;
+    private boolean FreePrison;
     private static String[] colors = {"BLUE",
             "CYAN",
             "DARK_GRAY",
@@ -41,6 +41,7 @@ public class Player
         try
         {
             account = new Account(20);
+            FreePrison = false;
             playerName = gui.getUserString("Input player name");
             String col = gui.getUserSelection("Choose color for " + playerName,
                     colors
@@ -101,6 +102,9 @@ public class Player
     {
         return account.getBalance();
     }
+
+    public boolean getFreePrison() {return FreePrison;}
+    public void setFreePrison(boolean jail) { FreePrison=jail;}
 
     public void addPoints(int points)
     {
