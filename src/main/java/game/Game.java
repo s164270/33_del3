@@ -143,7 +143,8 @@ public class Game
 
     public void testFunction()
     {
-        Chance card= new ChanceBirthday(board, gui, player,"Ryk frem til START\n Modtag M2", Color.BLUE,Color.ORANGE);
+        Chance card= new ChanceMoveColor(board, gui, player,"Ryk frem til et orange felt", Color.BLUE,Color.ORANGE, new String[]{"Burgerbaren","Pizzariaet"});
+
         card.executeChance(currentPlayer);
         //board.movePlayerPosition(currentPlayer,15);
     }

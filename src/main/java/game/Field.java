@@ -2,7 +2,7 @@ package game;
 
 import player.Player;
 
-public class Field {
+public abstract class Field {
     private String name;
 
     public Field()
@@ -21,6 +21,10 @@ public class Field {
     }
 
     public void visitField(Player player)
+    {
+    }
+
+    public void setOwner(Player currentPlayer)
     {
     }
 }

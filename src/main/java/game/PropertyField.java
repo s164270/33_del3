@@ -31,6 +31,9 @@ public class PropertyField extends Field{
     public Player getOwner() {
         return owner;
     }
+    public void setOwner(Player player) {
+        owner=player;
+    }
 
     public void setPaired(boolean paired) {
         this.paired = paired;

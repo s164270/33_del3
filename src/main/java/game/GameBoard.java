@@ -60,6 +60,10 @@ public class GameBoard
         return guiFields;
     }
 
+    public Field[] getField()
+    {
+        return fields;
+    }
     public void setField(int fieldIndex, Field field)
     {
         fields[fieldIndex] = field;
@@ -95,7 +99,7 @@ public class GameBoard
         for(int i = 0; i < NFIELDS; i++)
         {
             if(fields[i] == null)  {
-                fields[i] = new Field("felt nummer " + i);
+                fields[i] = new ParkingField("felt nummer " + i);
             }
         }
     }

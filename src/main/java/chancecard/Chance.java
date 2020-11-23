@@ -36,8 +36,5 @@ public abstract class Chance
         this.player=player;
     }
 
-    public void executeChance(Player currentPlayer)
-    {
-
-    }
+    public abstract void executeChance(Player currentPlayer);
 }
