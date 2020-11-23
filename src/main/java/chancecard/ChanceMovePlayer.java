@@ -32,6 +32,7 @@ public class ChanceMovePlayer extends Chance
     @Override
     public void executeChance(Player currentPlayer)
     {
+        gui.showMessage(text);
         for (int i = 0; i < player.length; i++)
         {
             if(player[i]==cardPlayer)
@@ -79,7 +80,7 @@ public class ChanceMovePlayer extends Chance
 
         if(!allPropertyOwned)
         {
-            choice = gui.getUserSelection(text, options);
+            choice = gui.getUserSelection(cardPlayer.getName() + " du må hoppe hen på hvilken som helst ledigt felt og købe det", options);
         }
         else
         {

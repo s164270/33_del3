@@ -17,6 +17,7 @@ public class Game
     private GUI gui;
     private Player[] player;
     private Player currentPlayer;
+    private ChanceCards chanceCards;
     private boolean gameOver;
 
     public Game()
@@ -31,6 +32,8 @@ public class Game
 
         gui.showMessage("Welcome to the game!\n");
         createPlayers();
+        chanceCards=new ChanceCards(board, gui, player);
+        chanceCards.createChance();
         gui.showMessage("Okay " + currentPlayer.getName() + ", you start.");
     }
 
@@ -53,6 +56,8 @@ public class Game
         gui.addPlayer(player[1].getGuiPlayer());
         gui.addPlayer(player[2].getGuiPlayer());
         currentPlayer = player[0];
+        chanceCards=new ChanceCards(board, gui, player);
+        chanceCards.createChance();
     }
 
     private void createPlayers()
@@ -144,8 +149,8 @@ public class Game
     public void testFunction()
     {
         Chance card= new ChanceMovePlayer(board, gui, player,"Ryk frem til et orange felt", Color.BLUE,Color.ORANGE, currentPlayer);
-        card.executeChance(currentPlayer);
-        currentPlayer.getChanceCard().executeChance();
+        chanceCards.getRandomChance().executeChance(currentPlayer);
+        //currentPlayer.getChanceCard().executeChance();
         board.movePlayerPosition(player[1],2);
         //board.movePlayerPosition(currentPlayer,15);
     }

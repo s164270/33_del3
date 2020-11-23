@@ -49,6 +49,12 @@ public class ChanceCards
         chances[21] = new ChanceMoveStart(board, gui, player,"Ryk frem til START\n Modtag M2", Color.BLUE,Color.ORANGE);
         chances[22] = new ChanceMoveStart(board, gui, player,"Ryk frem til START\n Modtag M2", Color.BLUE,Color.ORANGE);
         chances[23] = new ChanceMoveStart(board, gui, player,"Ryk frem til START\n Modtag M2", Color.BLUE,Color.ORANGE);
+        for (int i = 20; i < chances.length; i++)
+        {
+           int j = i % player.length;
+            chances[20] = new ChanceMovePlayer(board, gui, player,"Giv dette kort til "+ player[j].getName(), Color.BLUE,Color.ORANGE, player[j]);
+
+        }
 
 
         /*
