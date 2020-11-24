@@ -1,6 +1,7 @@
 package game;
 
 import player.Player;
+import chancecard.ChanceFreeJail;
 
 public class JailField extends Field {
     private int jailCost;

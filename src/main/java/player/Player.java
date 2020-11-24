@@ -21,6 +21,7 @@ public class Player
     private ChanceMovePlayer chanceCard;
     private GUI_Player gui_player;
     private boolean FreePrison;
+    private boolean broke;
     private static String[] colors = {"BLUE",
             "CYAN",
             "DARK_GRAY",
@@ -42,6 +43,7 @@ public class Player
         {
             account = new Account(0);
             FreePrison = false;
+            broke = false;
             playerName = gui.getUserString("Input player name");
             String col = gui.getUserSelection("Choose color for " + playerName,
                     colors
@@ -114,6 +116,10 @@ public class Player
     public boolean getFreePrison() {return FreePrison;}
     public void setFreePrison(boolean jail) { FreePrison=jail;}
 
+    public boolean isBroke() {
+        return broke;
+    }
+
     public void addPoints(int points)
     {
         if (points > 0)
@@ -122,7 +128,11 @@ public class Player
         }
         else
         {
-            account.withdraw(Math.abs(points));
+            int temp = account.withdraw(Math.abs(points));
+            if(temp < Math.abs(points))
+            {
+                broke = true;
+            }
         }
         this.gui_player.setBalance(account.getBalance());
     }
