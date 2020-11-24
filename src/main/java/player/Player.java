@@ -40,7 +40,7 @@ public class Player
     {
         try
         {
-            account = new Account(20);
+            account = new Account(0);
             FreePrison = false;
             playerName = gui.getUserString("Input player name");
             String col = gui.getUserSelection("Choose color for " + playerName,
