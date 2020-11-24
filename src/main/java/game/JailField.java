@@ -20,7 +20,7 @@ public class JailField extends Field {
         if(jailType)
         {
             player.setPosition(6);
-            player.addPoints(-1);
+            player.setInPrison(true);
             return player.getName() + " " + " landede på fængselsfeltet og blev sendt til fængslet ";
         }
         else

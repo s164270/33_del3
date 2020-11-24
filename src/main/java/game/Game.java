@@ -101,10 +101,29 @@ public class Game
     {
         gui.showMessage("It is " + player.getName() + "'s turn");
 
+        checkJail(player);
+        gameOver();
         rollDice();
+        gameOver();
         board.movePlayer(player, dice.getDice1());
         gameOver();
         changePlayer();
+    }
+
+    public void checkJail(Player player)
+    {
+        if(player.isInPrison())
+        {
+            if(player.getFreePrison())
+            {
+                player.setInPrison(false);
+                player.setFreePrison(false);
+            }
+            else
+            {
+                player.addPoints(-1);
+            }
+        }
     }
 
     public void gameOver()

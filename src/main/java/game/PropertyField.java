@@ -62,13 +62,11 @@ public class PropertyField extends Field{
         {
             if(paired)
             {
-                player.addPoints(-2*cost);
-                owner.addPoints(2*cost);
+                player.sendPoints(owner, 2*cost);
             }
             else
             {
-                player.addPoints(-cost);
-                owner.addPoints(cost);
+                player.sendPoints(owner, cost);
             }
         }
         return player.getName() + " " +  "landede på ejendomsfeltet" + " " + guiField.getTitle();

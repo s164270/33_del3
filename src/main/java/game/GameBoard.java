@@ -78,7 +78,6 @@ public class GameBoard
 
         fields[4] = new PropertyField("PropertyField 4", 1);
         fields[5] = new PropertyField("PropertyField 5", 1, (PropertyField) fields[4]);
-
         fields[6] = new JailField("felt nummer 6", 0, false);
         fields[7] = new PropertyField("felt nummer 7", 2);
         fields[8] = new PropertyField("felt nummer 8", 2, (PropertyField) fields[7]);
@@ -91,13 +90,9 @@ public class GameBoard
 
         fields[16] = new PropertyField("PropertyField 16", 3);
         fields[17] = new PropertyField("PropertyField 17", 3, (PropertyField) fields[16]);
-
         fields[18] = new JailField("felt nummer 18", 1,true);
         fields[19] = new PropertyField("PropertyField 19", 4);
         fields[20] = new PropertyField("PropertyField 20", 4, (PropertyField) fields[19]);
-
-        fields[19] = new PropertyField("felt nummer 19", 4);
-        fields[20] = new PropertyField("felt nummer 20", 4, (PropertyField) fields[19]);
 
         fields[22] = new PropertyField("PropertyField 22", 5);
         fields[23] = new PropertyField("PropertyField 23", 5, (PropertyField) fields[22]);
