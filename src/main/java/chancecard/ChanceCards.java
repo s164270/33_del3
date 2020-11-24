@@ -60,7 +60,7 @@ public class ChanceCards
     public Chance getRandomChance() {
         final Random random = new Random();
         int number;
-        number = random.nextInt(24);
+        number = random.nextInt(20);
         return chances[number];
     }
 
