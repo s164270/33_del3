@@ -1,5 +1,6 @@
 package game;
 
+import chancecard.ChanceCards;
 import gui_fields.GUI_Field;
 import gui_fields.GUI_Player;
 import gui_fields.GUI_Shipping;
@@ -115,6 +116,13 @@ public class GameBoard
         }
     }
 
+    public void createChanceFields(ChanceCards card)
+    {
+        fields[3] = new ChanceField("ChanceField 3", card);
+        fields[9] = new ChanceField("ChanceField 9", card);
+        fields[15] = new ChanceField("ChanceField 15", card);
+        fields[21] = new ChanceField("ChanceField 21", card);
+    }
     private void createGuiFields()
     {
         // Get the absolut file path for images in a way that works cross platform

@@ -35,6 +35,7 @@ public class Game
         createPlayers();
         chanceCards=new ChanceCards(board, gui, player);
         chanceCards.createChance();
+        board.createChanceFields(chanceCards);
         gui.showMessage("Okay " + currentPlayer.getName() + ", you start.");
     }
 
@@ -49,16 +50,15 @@ public class Game
         board.setGui(gui);
         gameOver = false;
 
-        player=new Player[3];
+        player=new Player[2];
         player[0] = new Player(playerName1);
         player[1] = new Player(playerName2);
-        player[2] = new Player("playerName3");
         gui.addPlayer(player[0].getGuiPlayer());
         gui.addPlayer(player[1].getGuiPlayer());
-        gui.addPlayer(player[2].getGuiPlayer());
         currentPlayer = player[0];
         chanceCards=new ChanceCards(board, gui, player);
         chanceCards.createChance();
+        board.createChanceFields(chanceCards);
     }
 
     private void createPlayers()
@@ -111,8 +111,16 @@ public class Game
     {
         gui.showMessage("It is " + player.getName() + "'s turn");
 
-        rollDice();
-        board.movePlayer(player, dice.getDice1());
+        if(player.getChanceCard()!=null)
+        {
+            player.getChanceCard().executeChance();
+            player.setChanceCard(null);
+        }
+        else
+        {
+            rollDice();
+            board.movePlayer(player, dice.getDice1());
+        }
         gameOver();
         changePlayer();
     }
@@ -158,10 +166,17 @@ public class Game
 
     public void testFunction()
     {
-        Chance card= new ChanceMovePlayer(board, gui, player,"Ryk frem til et orange felt", Color.BLUE,Color.ORANGE, currentPlayer);
-        chanceCards.getRandomChance().executeChance(currentPlayer);
+        //Chance card= new ChanceMovePlayer(board, gui, player,"Ryk frem til et orange felt", Color.BLUE,Color.ORANGE, currentPlayer);
+        //chanceCards.getRandomChance().executeChance(currentPlayer);
+        board.movePlayerPosition(currentPlayer,15);
+        board.movePlayerPosition(currentPlayer,15);
+        board.movePlayerPosition(currentPlayer,15);
+        board.movePlayerPosition(currentPlayer,15);
+        board.movePlayerPosition(currentPlayer,15);
+        board.movePlayerPosition(currentPlayer,15);
+        board.movePlayerPosition(currentPlayer,15);
+        board.movePlayerPosition(currentPlayer,15);
         //currentPlayer.getChanceCard().executeChance();
-        board.movePlayerPosition(player[1],2);
         //board.movePlayerPosition(currentPlayer,15);
     }
 
