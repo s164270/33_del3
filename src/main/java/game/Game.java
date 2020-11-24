@@ -1,22 +1,23 @@
 package game;
 
+import chancecard.*;
 import dice.DiceCup;
-import gui_fields.*;
 import gui_main.GUI;
 import player.Player;
 
 import java.awt.*;
-import java.io.File;
 import java.util.Arrays;
 
 public class Game
 {
 
-    private Player player[];
+
     private final DiceCup dice;
     private final GameBoard board;
     private GUI gui;
+    private Player[] player;
     private Player currentPlayer;
+    private ChanceCards chanceCards;
     private boolean gameOver;
 
     public Game()
@@ -31,6 +32,8 @@ public class Game
 
         gui.showMessage("Welcome to the game!\n");
         createPlayers();
+        chanceCards=new ChanceCards(board, gui, player);
+        chanceCards.createChance();
         gui.showMessage("Okay " + currentPlayer.getName() + ", you start.");
     }
 
@@ -42,13 +45,19 @@ public class Game
 
         board = new GameBoard();
         gui = new GUI(board.getGuiFields(), Color.WHITE);
-
+        board.setGui(gui);
         gameOver = false;
 
+        player=new Player[3];
         player[0] = new Player(playerName1);
         player[1] = new Player(playerName2);
+        player[2] = new Player("playerName3");
         gui.addPlayer(player[0].getGuiPlayer());
+        gui.addPlayer(player[1].getGuiPlayer());
+        gui.addPlayer(player[2].getGuiPlayer());
         currentPlayer = player[0];
+        chanceCards=new ChanceCards(board, gui, player);
+        chanceCards.createChance();
     }
 
     private void createPlayers()
@@ -137,5 +146,13 @@ public class Game
 
     }
 
+    public void testFunction()
+    {
+        Chance card= new ChanceMovePlayer(board, gui, player,"Ryk frem til et orange felt", Color.BLUE,Color.ORANGE, currentPlayer);
+        chanceCards.getRandomChance().executeChance(currentPlayer);
+        //currentPlayer.getChanceCard().executeChance();
+        board.movePlayerPosition(player[1],2);
+        //board.movePlayerPosition(currentPlayer,15);
+    }
 
 }

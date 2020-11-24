@@ -3,7 +3,7 @@ package game;
 import gui_fields.GUI_Field;
 import player.Player;
 
-public class Field {
+public abstract class Field {
     private String name;
     protected GUI_Field guiField;
 
@@ -28,5 +28,15 @@ public class Field {
 
     public void visitField(Player player)
     {
+    }
+
+    public String getName()
+    {
+        return name;
+    }
+
+    public void setName(String name)
+    {
+        this.name = name;
     }
 }
