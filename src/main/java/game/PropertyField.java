@@ -1,5 +1,6 @@
 package game;
 
+import gui_fields.GUI_Ownable;
 import player.Player;
 import gui_fields.GUI_Field;
 
@@ -52,6 +53,8 @@ public class PropertyField extends Field{
         {
             player.addPoints(-cost);
             owner = player;
+            ((GUI_Ownable)guiField).setBorder(player.getGuiPlayer().getCar().getPrimaryColor());
+
             if(neighbor.getOwner() == this.owner)
             {
                 paired = true;

@@ -31,6 +31,7 @@ public class Game
         board.setGui(gui);
         gameOver = false;
 
+
         gui.showMessage("Welcome to the game!\n");
         createPlayers();
         chanceCards=new ChanceCards(board, gui, player);
@@ -113,19 +114,23 @@ public class Game
 
         checkJail(player);
         gameOver();
-        rollDice();
-        gameOver();
-        board.movePlayer(player, dice.getDice1());
-        gameOver();
-        changePlayer();
+        if(!gameOver)
+        {
+            rollDice();
+            board.movePlayer(player, dice.getDice1());
+            gameOver();
+            changePlayer();
+        }
     }
 
     public void gameOver() {
         for (int i = 0; i < player.length; i++) {
-            if (player[i].isBroke())
-            {
+            if (player[i].isBroke()) {
                 this.gameOver = true;
             }
+        }
+    }
+
     public void checkJail(Player player)
     {
         if(player.isInPrison())
@@ -142,15 +147,7 @@ public class Game
         }
     }
 
-    public void gameOver()
-    {
-        if (currentPlayer.getPoints() >= 3000)
-        {
-            this.gameOver = true;
-        }
 
-        }
-    }
     public void endGame()
     {
         this.gameOver = true;
