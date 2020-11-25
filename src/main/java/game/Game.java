@@ -120,6 +120,12 @@ public class Game
         changePlayer();
     }
 
+    public void gameOver() {
+        for (int i = 0; i < player.length; i++) {
+            if (player[i].isBroke())
+            {
+                this.gameOver = true;
+            }
     public void checkJail(Player player)
     {
         if(player.isInPrison())
@@ -143,11 +149,24 @@ public class Game
             this.gameOver = true;
         }
 
+        }
     }
     public void endGame()
     {
         this.gameOver = true;
-        gui.showMessage("The game is over, " + currentPlayer.getName() + " has won!!");
+
+        Player currentWinner = player[0];
+        int currentMax = currentWinner.getPoints();
+
+        for (int i = 1; i < player.length; i++) {
+            if (player[i].getPoints() > currentMax)
+            {
+                currentMax = player[i].getPoints();
+                currentWinner = player[i];
+            }
+        }
+
+        gui.showMessage("The game is over, " + currentWinner.getName() + " has won!!");
         gui.close();
     }
 

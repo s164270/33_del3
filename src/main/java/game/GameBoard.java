@@ -100,7 +100,7 @@ public class GameBoard
         for(int i = 0; i < NFIELDS; i++)
         {
             if(fields[i] == null)  {
-                fields[i] = new ParkingField("ParkingField " + i);
+                fields[i] = new ParkingField("et chancekort");
             }
         }
 
