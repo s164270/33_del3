@@ -82,12 +82,19 @@ public class Player
 
     public void sendPoints(Player recipient, int amount)
     {
-        int temp;
-        if (amount > 0)
+        if(amount < 0)
         {
-            temp = account.withdraw(amount);
+            throw new IllegalArgumentException("sendPoints received a negative amount");
+        }
+        else
+        {
+            int temp = account.withdraw(amount);
             recipient.addPoints(temp);
             gui_player.setBalance(account.getBalance());
+            if(temp < amount)
+            {
+                broke = true;
+            }
         }
     }
 
