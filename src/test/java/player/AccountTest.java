@@ -1,9 +1,8 @@
-package test;
+package player;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import player.Account;
 
 import static org.junit.jupiter.api.Assertions.*;
 

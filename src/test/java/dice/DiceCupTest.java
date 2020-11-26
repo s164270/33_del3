@@ -1,4 +1,4 @@
-package test;
+package dice;
 
 import dice.DiceCup;
 import game.Game;
