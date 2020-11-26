@@ -98,7 +98,7 @@ public class GameBoard
 
         fields[10] = new PropertyField("PropertyField 10", 2);
         fields[11] = new PropertyField("PropertyField 11", 2, (PropertyField) fields[10]);
-
+        fields[12] = new ParkingField();
         fields[13] = new PropertyField("PropertyField 13", 3);
         fields[14] = new PropertyField("PropertyField 14", 3, (PropertyField) fields[13]);
 
@@ -113,14 +113,9 @@ public class GameBoard
 
         for(int i = 0; i < NFIELDS; i++)
         {
-            if(fields[i] == null)  {
-                fields[i] = new ParkingField("et chancekort");
+            if(fields[i] != null)  {
+                fields[i].setGuiField(guiFields[i]);
             }
-        }
-
-        for(int i = 0; i < NFIELDS; i++)
-        {
-            fields[i].setGuiField(guiFields[i]);
         }
     }
 
@@ -130,6 +125,11 @@ public class GameBoard
         fields[9] = new ChanceField("ChanceField 9", card);
         fields[15] = new ChanceField("ChanceField 15", card);
         fields[21] = new ChanceField("ChanceField 21", card);
+
+        fields[3].setGuiField(guiFields[3]);
+        fields[9].setGuiField(guiFields[9]);
+        fields[15].setGuiField(guiFields[15]);
+        fields[21].setGuiField(guiFields[21]);
     }
     private void createGuiFields()
     {

@@ -9,4 +9,9 @@ public class StartField extends Field{
         player.addPoints(2);
         System.out.println(player.getName() + " passerede start og fik $2");
     }
+
+    @Override
+    public String landOnField(Player player) {
+        return player.getName() + " landede på start";
+    }
 }
