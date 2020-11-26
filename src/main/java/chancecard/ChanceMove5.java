@@ -24,7 +24,8 @@ public class ChanceMove5 extends Chance
     public void executeChance(Player currentPlayer)
     {
         gui.showMessage(text);
-        board.movePlayer(currentPlayer,5);
+        int dist = gui.getUserInteger("Indtast antal felter", 1, 5);
+        board.movePlayer(currentPlayer,dist);
     }
 }
 

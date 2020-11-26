@@ -26,7 +26,7 @@ public class ChanceCards
     public void createChance()
     {
         chances[0] = new ChanceMoveStart(board, gui, player,"Ryk frem til START\n Modtag M2", Color.BLUE,Color.ORANGE);
-        chances[1] = new ChanceMove5(board, gui, player,"Ryk frem 5 felter", Color.BLUE,Color.ORANGE);
+        chances[1] = new ChanceMove5(board, gui, player,"Ryk op til 5 felter frem", Color.BLUE,Color.ORANGE);
         chances[2] = new ChanceBirthday(board, gui, player,"Det er din fødselsdag! Alle giver dig M1!\n Tillykke med fødselsdagen!", Color.BLUE,Color.ORANGE);
         chances[3] = new ChanceFreeJail(board, gui, player,"Du løslades uden omkostninger\n Behold dette kort intil du får brug for det.", Color.BLUE,Color.ORANGE);
         chances[4] = new ChanceGet2(board, gui, player,"Du har lavet alle dine lektier!\n Modtag M2 fra banken", Color.BLUE,Color.ORANGE);
