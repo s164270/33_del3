@@ -25,10 +25,10 @@ public class ChanceBirthday extends Chance
     {
         gui.showMessage(text);
         for (int i = 0; i < player.length; i++) {
-            player[i].addPoints(-1);
-            currentPlayer.addPoints(1);
-
-
+            if(player[i] != currentPlayer)
+            {
+                player[i].sendPoints(currentPlayer, 1);
+            }
         }
     }
 }
