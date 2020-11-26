@@ -35,6 +35,7 @@ public class PropertyField extends Field{
     }
     public void setOwner(Player player) {
         owner=player;
+        ((GUI_Ownable)guiField).setBorder(player.getGuiPlayer().getCar().getPrimaryColor());
     }
 
     public void setPaired(boolean paired) {
@@ -52,8 +53,7 @@ public class PropertyField extends Field{
         if(owner == null) //player has to buy the property
         {
             player.addPoints(-cost);
-            owner = player;
-            ((GUI_Ownable)guiField).setBorder(player.getGuiPlayer().getCar().getPrimaryColor());
+            setOwner(player);
 
             if(neighbor.getOwner() == this.owner)
             {
