@@ -32,30 +32,43 @@ public class GameBoard
 
     public void movePlayer(Player player, int distance){
         String msg;
-        guiFields[player.getPosition()].setCar(player.getGuiPlayer(), false);
+        int tempPosition = player.getPosition();
         while(distance > 0)
         {
             player.move(1);
             fields[player.getPosition()].visitField(player);
             distance--;
         }
-        msg = fields[player.getPosition()].landOnField(player);
+        guiFields[tempPosition].setCar(player.getGuiPlayer(), false);
         guiFields[player.getPosition()].setCar(player.getGuiPlayer(), true);
+        tempPosition = player.getPosition();
+        msg = fields[player.getPosition()].landOnField(player);
+        if(player.getPosition() != tempPosition) //do a second GUI update if the player was moved
+        {
+            guiFields[tempPosition].setCar(player.getGuiPlayer(), false);
+            guiFields[player.getPosition()].setCar(player.getGuiPlayer(), true);
+        }
         gui.showMessage(msg);
-
     }
 
     public void movePlayerPosition(Player player, int position){
-
-        guiFields[player.getPosition()].setCar(player.getGuiPlayer(), false);
+        String msg;
+        int tempPosition = player.getPosition();
         while(player.getPosition()!= position)
         {
             player.move(1);
             fields[player.getPosition()].visitField(player);
         }
+        guiFields[tempPosition].setCar(player.getGuiPlayer(), false);
         guiFields[player.getPosition()].setCar(player.getGuiPlayer(), true);
-        fields[player.getPosition()].landOnField(player);
-        gui.showMessage(player.getName() + " landede på " + guiFields[player.getPosition()].getTitle());
+        tempPosition = player.getPosition();
+        msg = fields[player.getPosition()].landOnField(player);
+        if(player.getPosition() != tempPosition) //do a second GUI update if the player was moved
+        {
+            guiFields[tempPosition].setCar(player.getGuiPlayer(), false);
+            guiFields[player.getPosition()].setCar(player.getGuiPlayer(), true);
+        }
+        gui.showMessage(msg);
     }
 
     public GUI_Field[] getGuiFields() {
