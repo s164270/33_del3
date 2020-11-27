@@ -31,7 +31,6 @@ public class Game
         board.setGui(gui);
         gameOver = false;
 
-
         gui.showMessage("Welcome to the game!\n");
         createPlayers();
         chanceCards=new ChanceCards(board, gui, player);
@@ -64,7 +63,6 @@ public class Game
 
     private void createPlayers()
     {
-
         int numPlayers = gui.getUserInteger("Chose number of players",2,4);
         player=new Player[numPlayers];
         int minAge = 999;
