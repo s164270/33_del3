@@ -31,12 +31,12 @@ public class Game
         board.setGui(gui);
         gameOver = false;
 
-        gui.showMessage("Welcome to the game!\n");
+        gui.showMessage("Velkomment til spillet!\n");
         createPlayers();
         chanceCards=new ChanceCards(board, gui, player);
         chanceCards.createChance();
         board.createChanceFields(chanceCards);
-        gui.showMessage("Okay " + currentPlayer.getName() + ", you start.");
+        gui.showMessage("Okay " + currentPlayer.getName() + ", du starter.");
     }
 
     public Game(String playerName1, String playerName2)
