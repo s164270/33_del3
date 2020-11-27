@@ -9,6 +9,7 @@ import player.Player;
 
 import java.awt.*;
 import java.io.File;
+import java.util.Arrays;
 
 public class GameBoard
 {
@@ -162,5 +163,14 @@ public class GameBoard
 
         //guiFields[12].setForeGroundColor(Color.RED);
 
+    }
+
+    @Override
+    public String toString() {
+        for(int i=0; i<fields.length; i++)
+        {
+            System.out.println(guiFields[i].getTitle());
+        }
+        return "";
     }
 }
