@@ -22,7 +22,7 @@ public class JailField extends Field {
         {
             player.setPosition(6);
             player.setInPrison(true);
-            return player.getName() + " " + " landede på fængselsfeltet og blev sendt til fængslet ";
+            return player.getName() + " " + "landede på fængselsfeltet og blev sendt til fængslet";
         }
         else
         {

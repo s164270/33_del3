@@ -14,7 +14,6 @@ import java.util.stream.Collector;
 
 public class Player
 {
-
     private int position = 0;
     private Account account;
     private String playerName;
@@ -101,23 +100,12 @@ public class Player
     public void move(int distance)
     {
         if(distance < 0 || distance > 24)
-        {
             throw new IllegalArgumentException("distance can't be <0 or be >24");
-        }
-
         if(position + distance < 24)
-        {
             position = position + distance;
-        }
         else
-        {
             position = (position + distance) - 24;
     }
-            /*if(position == 18)
-            {
-                position = 6;
-            }*/
-        }
 
     public void setPosition(int position) {
         this.position = position;
