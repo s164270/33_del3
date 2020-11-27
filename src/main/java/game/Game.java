@@ -63,7 +63,7 @@ public class Game
 
     private void createPlayers()
     {
-        int numPlayers = gui.getUserInteger("Chose number of players",2,4);
+        int numPlayers = gui.getUserInteger("Vælg antal spillere",2,4);
         player=new Player[numPlayers];
         int minAge = 999;
         int minAgeIndex = 0;
@@ -72,7 +72,7 @@ public class Game
         {
             player[i] = new Player(gui);
             gui.addPlayer(player[i].getGuiPlayer());
-            age = gui.getUserInteger("What is "+ player[i].getName()+" age?");
+            age = gui.getUserInteger("Hvad er "+ player[i].getName()+"'s alder?");
             if (age < minAge)
             {
                 minAge=age;
@@ -108,7 +108,7 @@ public class Game
 
     public void turn(Player player)
     {
-        gui.showMessage("It is " + player.getName() + "'s turn");
+        gui.showMessage("Det er " + player.getName() + "'s tur");
 
         if(player.getChanceCard()!=null)
         {
@@ -151,7 +151,6 @@ public class Game
     public void endGame()
     {
         this.gameOver = true;
-
         Player currentWinner = player[0];
         int currentMax = currentWinner.getPoints();
 
@@ -163,7 +162,7 @@ public class Game
             }
         }
 
-        gui.showMessage("The game is over, " + currentWinner.getName() + " has won!!");
+        gui.showMessage("Spillet er slut, " + currentWinner.getName() + " har vundet!!");
         gui.close();
     }
 
